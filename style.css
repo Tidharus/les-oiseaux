@@ -1,0 +1,22 @@
+body {
+
+  background-color: oklch(98.895% 0.01575 197.297);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-decoration: underline;
+}
+
+a {
+  color:#000000
+}
+
+.ma-classe {
+  color: rgb(159, 27, 27);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.ma-classe-2 {
+  color: #c41414
+}
