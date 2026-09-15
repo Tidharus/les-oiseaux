@@ -3,12 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <title>Les Oiseaux</title>
   </head>
   <body>
-    <h1>Les oiseaux du monde</h1>
-    <nav>
+    <header class="header">
+      <h1>Les oiseaux du monde</h1>
+    </header>
+    
+    <nav class="nav-navigation">
       <li>
         <a href="page2.html">Les Oiseaux Page2</a>
       </li>
@@ -16,29 +22,37 @@
         <a href="contenu/page3.html">Les oiseaux page3</a>
       </li>
     </nav>
-    <h1>Index</h1>
-    <ul>
-      <li><a href="#lien">lien hypertexte html</a></li>
-      <li><a href="#id-lien">Ancre lien vers un endroit</a></li>
-      <li><a href="#image">Image</a></li>
-    </ul>
-    <h2>Les oiseaux du monde</h2>
-    <p>
-      <img
-        src="img/oiseaux-europe.jpg"
-        alt="Oiseaux d'Europe"
-        title="Oiseaux d'Europe"
-        width="700"
-        height="300"
-      />
-    </p>
-    <h3>Les oiseaux d'Europe</h3>
 
-    <p class="ma-classe">
+    <main>
+      <section class="section-index">
+         <h2>Index</h2>
+          <ul>
+            <li><a href="#lien">lien hypertexte html</a></li>
+            <li><a href="#id-lien">Ancre lien vers un endroit</a></li>
+            <li><a href="#image">Image</a></li>
+          </ul>
+      </section>
+     <section class="section-oiseaux">
+      <article class="section-oiseaux__article-oiseaux-du-monde">
+        <h2>Les oiseaux du monde</h2>
+        <figure>
+          <img
+            src="/img/oiseaux_europe.jpg"
+            alt="Oiseaux d'Europe"
+            title="Oiseaux d'Europe"
+            width="700"
+            height="300"
+          />
+        </figure>
+      </article>
+      <article class="section-oiseaux__article-oiseaux-europe">
+      <h3>Les oiseaux d'Europe</h3>
+
+    <p>
       Il existe plus de 990 espèces d'oiseaux répertoriées dans toute l'Europe.
     </p>
     <p>
-      L'avifaune européenne compte plus de <span class="ma-classe-2">900 espèces d'oiseaux</span> réparties entre
+      L'avifaune européenne compte plus de <span class="ma-classe">900 espèces d'oiseaux</span> réparties entre
       espèces nicheuses, hivernantes, migratrices et visiteuses occasionnelles.
     </p>
 
@@ -48,314 +62,40 @@
       <li>Crabier Chevelu</li>
       <li>Gypaète Barbu</li>
       <li>Mésange Bleu</li>
-      <li><em>Mouette Tâcheté</em></li>
+      <li>Mouette Tâcheté</li>
     </ul>
 
     <ol>
-      <li><strong>Alouette des champs</strong></li>
+      <li>Alouette des champs</li>
       <li>Aigrette Garzette</li>
       <li>Crabier Chevelu</li>
       <li>Gypaète Barbu</li>
       <li>Mésange Bleu</li>
-      <li><mark>Mouette Tâcheté</mark></li>
+      <li>Mouette Tâcheté</li>
     </ol>
-    <ul>
-      <li>&lt;mark&gt; &lt;/mark&gt; Surligner un texte</li>
-      <li>&lt;em&gt; &lt;/em&gt; mettre le texte en italique</li>
-      <li>&lt;strong&gt; &lt;/strong&gt; mettre le texte en gras</li>
-    </ul>
-    <h2 id="lien">Créer un lien hypertexte</h2>
-    <h3>3 type de liens</h3>
-    <ul>
-      <li>Lien site externe</li>
-      <li>llien vers des pages internes au site</li>
-      <li>Lien vers des endroits précis du site</li>
-    </ul>
-    <h4>Lien vers un site externe</h4>
-    <a href="https://fr.wikipedia.org/wiki/Oiseau">Page Wiki des oiseaux</a>
-    <p>Par défaut le lien se met en bleu</p>
-    <p>Et si la lien a été utlisé il s'affichera en violet</p>
-    <p>On peut changer les couleurs des liens grace au CSS</p>
-    <h4>Lien entre les différentes page de notre site</h4>
-    <p>On va créer un lien relatif</p>
-    <p>
-      <strong><u>Les oiseaux Page 2</u></strong>
-    </p>
-    <a href="page2.html">Les Oiseaux Page2</a>
-    <h5>Sous Dossier</h5>
-    <p>
-      La page se trouve dans un autre dossier de notre projet ici dans contenu
-    </p>
-    <a href="contenu/page3.html">Les oiseaux page3</a>
-    <p>
-      Pour retourner en arrière vers le dossier parent on va créer dans page2 et
-      page3 un lien pour revenir ici a notre page principale index.html
-    </p>
-    <h4 id="id-lien">Lien vers des endroits précis du site</h4>
-    <p>
-      il s'agit d'atterir au milieu, début ou à la fin d'une page à un endroit
-      précis
-    </p>
-    <p>
-      On va utiliser un ancre avec les attributs <mark>"id" et "href".</mark>
-    </p>
-    <p>
-      Une ancre est un repère que l'on peut mettre dans une page HTML si elle
-      est très longue, cela aide à la navigation et rend un contenu plus facile
-      à parcourir. Cela permet par exemple aux visiteurs d'un site web d'aller
-      directement à la partie qui les intéresse.
-    </p>
-
-    <p>
-      Pour créer une ancre, il suffit de rajouter l'attribut id à une balise qui
-      va alors servir de repère. Ce peut être n'importe quelle balise, une
-      balise de titre par exemple
-    </p>
-
-    <p>
-      La première étape consiste à ajouter l'attribut id suivi de = pour donner
-      un nom à l'ancre entre " "
-    </p>
-    <pre>
-    &lt;h2 id="mon_ancre"&gt;Titre&lt;/h2&gt;
-  </pre
-    >
-    <p>
-      L'attribut id sert à donner un nom “unique” à une balise, pour s'en servir
-      de repère. Et, croyez-moi, vous n'avez pas fini d'entendre parler de cet
-      attribut. Ici, on s'en sert pour faire un lien vers une ancre mais, en
-      CSS, il pourra nous être utile pour repérer une balise précise, vous
-      verrez.
-    </p>
-    <p>
-      Évitez de créer des id avec des espaces ou des caractères spéciaux ;
-      utilisez simplement, dans la mesure du possible, des lettres et des
-      chiffres pour que la valeur soit reconnue par tous les navigateurs.
-    </p>
-    <p>
-      La seconde étape consiste à indiquer où se situe l'ancre. La méthode pour
-      se faire varie selon que :
-    </p>
-    <ol>
-      <li>l'ancre est plus bas sur la même page</li>
-      <li>l'ancre est située sur une autre page</li>
-    </ol>
-    <h4>Cas n°1 : l'ancre est plus bas ou plus haut sur la même page</h4>
-    <p>
-      Dans ce premier cas, on crée un lien avec l'attribut href (il contient un
-      dièse # suivi du nom de l'ancre) :
-    </p>
-    <h1>Exemple:</h1>
-    <h4>Ma Grande Page</h4>
-    <p>
-      Découvrez nos conseils d'aménagement pour :<br />
-      <a href="#cuisine">La cuisine</a><br />
-      <a href="#jardin">Le jardin</a><br />
-      <a href="#salon">Le salon</a><br />
-    </p>
-    <h2 id="cuisine">La cuisine</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eaque, odit
-      quaerat quo magnam pariatur laudantium, mollitia molestias voluptatem
-      eveniet voluptatibus culpa, exercitationem officia repellat sint ipsa esse
-      nesciunt Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-      Laboriosam repudiandae reprehenderit eos iure quis nisi quam, neque optio
-      blanditiis nam sequi porro odio assumenda incidunt dicta commodi nisi
-      deserunt non ipsa suscipit accusantium doloremque assumenda aut esse a
-      numquam sunt illo voluptatem, neque labore culpa autem harum. Aut in odio
-      aliquid nisi, eligendi id? Placeat veritatis nulla reiciendis, fugit omnis
-      illo nihil quae esse quo aliquam laudantium deserunt, facere dolorum
-      consectetur quam praesentium voluptas voluptate! Aspernatur, sunt
-    </p>
-    <h2 id="jardin">Le jardin</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis odit
-      incidunt harum tempora nesciunt similique sunt doloremque dolorem saepe
-      sed rem at aut consequatur, possimus a dolore eligendi ex
-    </p>
-    <h2 id="salon">Le salon</h2>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium,
-      incidunt sapiente rem obcaecati cumque ut repellendus quam necessitatibus?
-      Ipsam illum quis illo rerum maiores deleniti commodi cupiditate ullam
-      maxime sequi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
-      earum eaque ipsa consequatur quod minus beatae dicta ipsam ad laudantium
-      temporibus dolore unde vel, nam recusandae necessitatibus velit cupiditate
-    </p>
-    <h4>Cas n°2 : l'ancre est située dans une autre page</h4>
-    <p>On va le mettre sur la page2</p>
-    <a href="page2.html#cuisine">La cuisine</a><br />
-    <a href="page2.html#jardin">Le jardin</a><br />
-    <a href="page2.html#salon">Le salon</a><br />
-    <h4>Dans un sous dossier</h4>
-    <p>On va mettre les infos dans la page3 dans le dossier contenu</p>
-    <p><u>Page 3</u></p>
-    <a href="contenu/page3.html#cuisine" target="_blank">La cuisine</a><br />
-    <a href="contenu/page3.html#jardin" target="_blank">Le jardin</a><br />
-    <a href="contenu/page3.html#salon" target="_blank">Le salon</a><br />
-    <p>
-      <strong>target="_blank"</strong>fait en sorte que le lien hypetexte ouvre
-      un nouvel onglet
-    </p>
-    <ul>
-      <li>
-        href="mailto:NOMDUMAIL@MAIL.COM" crée un lien hypertexte qui ouvre la
-        boîte mail avec un nouveau message vide.
-      </li>
-      <li>
-        href="NOMDEFICHIER.EXTENSION" crée un lien hypertexte qui permet de
-        télécharger un fichier que vous avez placé au préalable dans le même
-        dossier que votre page web.
-      </li>
-    </ul>
-    <h2 id="image">Inserez des Images</h2>
-    <h3>Insérez une image avec la balise orpheline &lt;img&gt;</h3>
-    <h4>Formats d'images</h4>
-    <h5>Insérez une image avec la balise orpheline &lt;img&gt;</h5>
-    <p>
-      La balise qui permet d'insérer une image est une balise orpheline :
-      &lt;img&gt;
-    </p>
-    <p>
-      Pour fonctionner correctement, la balise <img /> doit être accompagnée de
-      deux attributs :
-    </p>
-    <ol>
-      <li>src : cet attribut permet d'indiquer la source de l'image.</li>
-      <li>
-        alt : cet attribut permet de donner à l'image une description
-        alternative.
-      </li>
-    </ol>
-    <h5>Ajoutez l'attribut src pour indiquer la source de l'image</h5>
-    <p>
-      La source de l'image est précisée avec l'attribut
-      <strong>src </strong>pour indiquer au navigateur comment récupérer l'image
-      que l'on veut insérer. De la même manière qu'un lien hypertexte, on peut
-      indiquer la source d'une image :
-    </p>
-    <p>
-      <strong>…avec un chemin absolu si l'image vient d'internet:</strong>
-    </p>
-    <img
-      src="https://course.oc-static.com/courses/1603881/logo-openclassrooms.png"
-      alt="Logo d'OpenClassrooms"
-    />
-    <p>
-      Lorsque vous utilisez cette technique, faites attention à ce que l'URL
-      corresponde bien à l'image uniquement, et pas à une page web qui contient
-      une image. Pour vous en assurer, vous pouvez faire un clic droit sur
-      l'image de votre choix, et choisir "Copier l'adresse de l'image".
-    </p>
-    <p>
-      <strong
-        >ou avec un chemin relatif si l'image est en local sur votre
-        ordinateur</strong
-      >
-    </p>
-    <img src="img/logo-openclassrooms.png" alt="Logo d'OpenClassrooms" />
-    <p>
-      C'est ce que l'on fait si l'image est sur notre ordinateur : on utilise
-      alors le nom et l'arborescence du fichier de l'image en local pour
-      indiquer sa source.
-    </p>
-    <p>
-      Si l'image est dans un sous-dossier nommé images ou img, on précise :
-      src="images/logo.png"- img/logo-openclassrooms.png
-    </p>
-    <p
-      style="
-        color: red;
-        text-decoration: underline;
-        font-size: 20px;
-        background-color: yellow;
-      "
-    >
-      Évitez à tout prix les accents, majuscules et espaces dans vos noms de
-      fichiers et de dossiers. Par exemple, voici un chemin qui va poser
-      problème : Images du site/Image toute bête.jpg
-    </p>
-    <p>Il faut idéalement :</p>
-    <ul>
-      <li>
-        supprimer les espaces (ou les remplacer par le symbole_) et les accents
-        ;
-      </li>
-      <li>
-        out mettre en minuscules, comme ceci
-        :images_du_site/image_toute_bete.jpg.
-      </li>
-    </ul>
-    <h5>Choisissez le bon format d'image</h5>
-    <ul>
-      <li>
-        <strong>WebP</strong> de type: Matriciel est le standart actuel pour les
-        photos et graphisme, est ~30% plus léger que le JPG, support universel
-        sur tous les navigateurs modernes, gère la transparence et l'animation.
-      </li>
-      <li>
-        <strong>AVIF</strong> de type: Matriciel pour les photos & visuels
-        complexes modernes son taux de compression exceptionnel est ~50% plus
-        léger que le JPG, support universel sur tous les navigateurs modernes,
-        gère la transparence et l'animation et le HDR.
-      </li>
-      <li>Une photo : utilisez un JPEG.</li>
-      <li>
-        N'importe quelle image avec peu de couleurs (moins de 256) : utilisez un
-        PNG 8 bits, ou éventuellement un GIF.
-      </li>
-      <li>
-        N'importe quelle image avec beaucoup de couleurs : utilisez un PNG 24
-        bits.
-      </li>
-      <li>Une image animée : utilisez un GIF animé.</li>
-      <li></li>
-    </ul>
-    <p>
-      Le HDR (High Dynamic Range ou plage dynamique étendue) désigne la capacité
-      d'une image à afficher simultanément des zones très sombres et des zones
-      très lumineuses sans perdre de détails, tout en couvrant une gamme de
-      couleurs nettement plus vaste que le standard classique (SDR).
-    </p>
-    <p>Différence de luminosité et de contrastes entre SDR et HDR. Source :</p>
-    <ul>
-      <li>
-        Plus de luminosité max : Les reflets, le soleil ou les néons ressortent
-        de façon éclatante sans devenir de grands blocs blancs "brûlés".
-      </li>
-      <li>
-        Des ombres détaillées : Les zones sombres conservent des nuances au lieu
-        d'être réduites à du noir pur complètement "bouché"
-      </li>
-      <li>
-        Des couleurs plus riches : Le HDR utilise un espace colorimétrique
-        étendu (comme le Rec. 2020 ou DCI-P3), capable d'afficher des rouges,
-        des verts et des bleus bien plus saturés qu'en SDR (sRGB).
-      </li>
-    </ul>
-    <h5>Créez une miniature cliquable</h5>
-    <p>
-      Si votre image est très grosse, il est conseillé d'en afficher la
-      miniature cliquable sur votre site. De cette manière vos pages web
-      mettront moins de temps à s'afficher. Si vos visiteurs souhaitent voir vos
-      images en taille originale, ils n'auront qu'à cliquer dessus.
-    </p>
-    <p>
-      Pour ce faire, il faut disposer de deux versions d’une photo : l'image
-      d'origine, et une version de cette image moins lourde (donc plus petite).
-    </p>
-    <p>Voyons voir comment faire en sorte que la miniature soit cliquable :</p>
-    <ol>
-      <li>placez vos deux images dans un dossier appelé par exemple images</li>
-      <li>Faites afficher la version montagne_mini.jpg sur une page,</li>
-      <li>et faites un lien vers la version montagne.jpg.</li>
-    </ol>
-
-    <a href="img/oiseaux-europe.jpg"
+<figure>
+  <img src="/img/oiseaux_europe3.jpeg" alt="oiseaux d'Europe">
+  <figcaption>Oiseaux d'Europe</figcaption>
+</figure>
+   
+<figure>
+     <a href="/img/oiseaux_europe1.jpg"
       ><img
-        src="img/oiseaux-europe-mini.jpg"
+        src="/img/oiseaux_europe2-mini.jpg"
         alt="oiseaux europe"
         title="cliquez pour aggrandir"
     /></a>
+    <figcaption>Oiseaux d'Europe</figcaption>
+</figure>
+      </article>
+
+     </section>
+    
+   
+    </main>
+  <footer>
+
+  </footer>
+ 
   </body>
 </html>
