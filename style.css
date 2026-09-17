@@ -17,7 +17,7 @@ body {
 .header {
   background-color: #000000;
   margin-bottom: 0;
-  padding-top: 0;
+  padding-top: 2em;
   padding-bottom: 3em; /* Ajuste selon ton design */
 }
 
@@ -31,20 +31,20 @@ h1 {
 }
 
 /*NAV*/
-.nav-navigation {
+.nav-navigation-pages {
   padding-top: 2em;
   padding-bottom: 2em;
 
   background-color: #4a4444; /* Ta couleur de fond */
 }
 
-.nav-navigation>li>a {
+.nav-navigation-pages>li>a {
   color: white;
   font-size: 2em;
   text-decoration: none;
 }
 
-.nav-navigation>li>a:hover {
+.nav-navigation-pages>li>a:hover {
   color: #cfb8b8;
   text-decoration: underline;
 }
@@ -87,6 +87,16 @@ li, figcaption {
   text-decoration: underline;
 }
 
+/*fexbox*/
+.conteneur {
+  display: flex;
+  /* flex-direction: row; */
+}
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000000
+}
 
 
 
